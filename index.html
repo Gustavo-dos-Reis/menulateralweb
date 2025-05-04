@@ -1,77 +1,33 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu Lateral Retrátil</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <!-- Botão para abrir/fechar o menu -->
-        <button id="menu-toggle" class="menu-toggle">
-            <i class="fas fa-bars"></i>
-        </button>
 
-        <!-- Menu Lateral -->
-        <aside class="sidebar" id="sidebar">
-            <div class="sidebar-header">
-                <h2>Menu</h2>
-                <button class="close-btn" id="close-btn">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            
-            <nav class="sidebar-nav">
-                <ul>
-                    <li>
-                        <a href="#">
-                            <i class="fas fa-home"></i>
-                            <span>Início</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fas fa-user"></i>
-                            <span>Perfil</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fas fa-envelope"></i>
-                            <span>Mensagens</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fas fa-cog"></i>
-                            <span>Configurações</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fas fa-question-circle"></i>
-                            <span>Ajuda</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            
-            <div class="sidebar-footer">
-                <a href="#" class="logout-btn">
-                    <i class="fas fa-sign-out-alt"></i>
-                    <span>Sair</span>
-                </a>
-            </div>
-        </aside>
+    <div class="sidebar">
+        <div class="toggle-btn" onclick="toggleSidebar()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Sobre Nós</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Portfólio</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </div>
 
-        <!-- Conteúdo Principal -->
-        <main class="main-content" id="main-content">
-            <h1>Conteúdo Principal</h1>
-            <p>Clique no botão no canto superior esquerdo para abrir/fechar o menu.</p>
-            <p>Em telas pequenas, o menu abre sobre o conteúdo. Em telas maiores, o conteúdo se ajusta ao lado do menu.</p>
-        </main>
+    <div class="content">
+        <button class="open-btn" onclick="openSidebar()">Abrir Menu</button>
+        <h1>Conteúdo Principal da Página</h1>
+        <p>Este é o conteúdo principal da sua página. O menu lateral pode ser expandido ou retraído.</p>
+        <p>Experimente redimensionar a janela do navegador para ver como o menu se adapta.</p>
     </div>
 
     <script src="script.js"></script>
